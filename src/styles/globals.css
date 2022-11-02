@@ -25,7 +25,7 @@ body {
   padding: var(--size-fluid-2);
 }
 
-pre {
+.error {
   background-color: var(--red-8);
   padding: var(--size-fluid-2);
   overflow: scroll;

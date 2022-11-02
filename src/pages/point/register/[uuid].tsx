@@ -24,12 +24,14 @@ export default function RegistePoint() {
 
   return (
     <>
+      <h1>Register point</h1>
+
       <form onSubmit={handleSubmit(({ name }) => registerPointMutation.mutate({ uuid, name, longitude: location.longitude, latitude: location.latitude }))}>
         <fieldset>
           <legend>Point</legend>
 
           <label htmlFor="uuid">Uuid</label>
-          <output id="uuid">{uuid}</output>
+          <pre id="uuid">{uuid}</pre>
 
           <label htmlFor="name">name</label>
           <input id="name" type="text" {...register('name', { required: true })} />
@@ -39,10 +41,10 @@ export default function RegistePoint() {
           <legend>Location</legend>
 
           <label htmlFor="lat">lat</label>
-          <output id="lat">{location.latitude}</output>
+          <pre id="lat">{location.latitude}</pre>
 
           <label htmlFor="long">Long</label>
-          <output id="long">{location.longitude}</output>
+          <pre id="long">{location.longitude}</pre>
         </fieldset>
 
         <input type="submit" value="Register" />
