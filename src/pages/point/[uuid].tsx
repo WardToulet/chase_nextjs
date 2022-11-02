@@ -11,6 +11,10 @@ export default function Point({ uuid }: { uuid: string }) {
   const router = useRouter();
   const pointQuery = trpc.point.get.useQuery({ uuid });
   // const captureMutation = trpc.point.capture({ uuid });
+
+  if (pointQuery.isLoading) {
+    return <i>Loading</i>
+  }
     
   if (pointQuery.isSuccess && !pointQuery.data) {
     router.replace(`/point/register/${uuid}`);
