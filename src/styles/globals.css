@@ -1,3 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "https://unpkg.com/open-props";
+
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
+form {
+  display: grid;
+  gap: var(--size-fluid-2);
+}
+
+fieldset {
+  padding-inline: var(--size-fluid-2);
+  grid-template-columns: auto 1fr;
+  display: grid;
+  column-gap: var(--size-fluid-2);
+  row-gap: var(--size-fluid-1);
+}
+
+label {
+  text-transform: lowercase;
+}
+
+body {
+  padding: var(--size-fluid-2);
+}
