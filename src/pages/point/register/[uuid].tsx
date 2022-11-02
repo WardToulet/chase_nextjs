@@ -14,6 +14,14 @@ export default function RegistePoint() {
   const { register, handleSubmit } = useForm();
 
 
+  if (registerPointMutation.isSuccess) {
+    return 'finsihed'
+  }
+
+  if (registerPointMutation.isError) {
+    return <pre>{JSON.stringify(registerPointMutation.error, null, 2)}</pre>
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit(({ name }) => registerPointMutation.mutate({ uuid, name, longitude: location.longitude, latitude: location.latitude }))}>

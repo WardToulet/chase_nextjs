@@ -24,3 +24,11 @@ label {
 body {
   padding: var(--size-fluid-2);
 }
+
+pre {
+  background-color: var(--red-8);
+  padding: var(--size-fluid-2);
+  overflow: scroll;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+}
