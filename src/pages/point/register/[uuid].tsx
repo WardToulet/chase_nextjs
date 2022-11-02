@@ -6,8 +6,7 @@ import { trpc } from "../../../utils/trpc";
 export default function RegistePoint() {
   const router = useRouter();
 
-  // @ts-ignore
-  const { uuid } = router.query as string;
+  const { uuid } = router.query as { uuid: string };
 
   const registerPointMutation = trpc.point.register.useMutation();
 

@@ -16,3 +16,7 @@ export async function getServerSideProps(context: { params: { uuid: string }}) {
     props: { uuid: context.params.uuid }
   }
 }
+
+export default function Point(uuid: string) {
+  return <>{uuid}</>
+}
